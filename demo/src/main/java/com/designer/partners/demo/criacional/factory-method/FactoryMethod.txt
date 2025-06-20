@@ -1,0 +1,19 @@
+# Meu Problema:
+
+- Como eu consigo escrever um código onde as classes que eu instancio possam variar dentro de uma mesma insterface?
+
+-Como eu posso deixar o código que escrevo "desligar" da classe concreta
+
+# Solução:
+
+-Extrair a lógica dentro da criação de objetos novos para um factory method.
+
+-Invocar o factory method para receber uma instancia qualquer que possa implementar determinar classe 
+
+#Usa muito encapsulamento e herança
+
+#De acordo com GOF:
+
+- Um padrao que define uma interface para criar um objeto mas permite as classes decidirem qual classe instanciar. O factory method permite a uma classe deferir a instanciação para as subclasses.
+
+
