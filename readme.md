@@ -1,9 +1,10 @@
-# Design Java - Boas Práticas
+# Boas Práticas de Design Orientado a Objetos — Java, JavaScript, TypeScript
 
 ## Índice
 
-1. [🔹 Princípios de Design](#1-princípios-de-design)
-2. [🔹 Padrões de Projeto (Design Patterns)](#2-padrões-de-projeto-design-patterns)
+1. [🔹 Princípios de Design](#1-princípios-de-design)  
+2. [🔹 Padrões de Projeto (Design Patterns)](#2-padrões-de-projeto-design-patterns)  
+3. [🔹 Princípios SOLID](#3-princípios-solid)
 
 ---
 
@@ -141,4 +142,89 @@
 
 ---
 
-.
+## 3. Princípios SOLID
+
+Os princípios **SOLID** são cinco diretrizes da Programação Orientada a Objetos que ajudam a criar código mais modular, manutenível, testável e escalável.
+
+---
+
+### 🔸 S — Single Responsibility Principle (Responsabilidade Única)
+
+> Uma classe deve ter apenas uma responsabilidade.
+
+#### 💡 Por que aplicar:
+- Classes com múltiplas responsabilidades são mais difíceis de manter.
+- Mudanças em uma funcionalidade podem afetar outras.
+
+#### ✅ Como aplicar:
+- Separe responsabilidades distintas em diferentes classes ou módulos.
+
+---
+
+### 🔸 O — Open/Closed Principle (Aberto/Fechado)
+
+> Classes devem ser **abertas para extensão** e **fechadas para modificação**.
+
+#### 💡 Por que aplicar:
+- Modificar classes existentes pode introduzir falhas em partes que já funcionavam.
+
+#### ✅ Como aplicar:
+- Use herança ou composição para estender funcionalidades.
+- Prefira adicionar novos comportamentos a criar alterações diretas.
+
+---
+
+### 🔸 L — Liskov Substitution Principle (Substituição de Liskov)
+
+> Subtipos devem poder substituir seus tipos base sem alterar o comportamento do sistema.
+
+#### 💡 Por que aplicar:
+- Subclasses que se comportam de forma diferente da classe pai podem quebrar funcionalidades.
+
+#### ✅ Como aplicar:
+- Garanta que a subclasse respeite as expectativas da classe pai.
+- Evite sobrescrever métodos com lógica incompatível.
+
+---
+
+### 🔸 I — Interface Segregation Principle (Segregação de Interface)
+
+> Nenhuma classe deve ser forçada a depender de métodos que não utiliza.
+
+#### 💡 Por que aplicar:
+- Interfaces grandes tornam a implementação mais complexa.
+- Classes acabam implementando métodos inúteis.
+
+#### ✅ Como aplicar:
+- Divida interfaces grandes em menores, específicas para cada contexto.
+
+---
+
+### 🔸 D — Dependency Inversion Principle (Inversão de Dependência)
+
+> 
+- Módulos de alto nível não devem depender de módulos de baixo nível.  
+- Ambos devem depender de abstrações.
+
+#### 💡 Por que aplicar:
+- Reduz o acoplamento entre componentes.
+- Facilita testes e manutenção.
+
+#### ✅ Como aplicar:
+- Utilize interfaces para definir contratos.
+- Injeção de dependência é uma prática comum para aplicar este princípio.
+
+---
+
+### ✅ Resumo dos Princípios SOLID
+
+| Letra | Princípio                     | Objetivo                                                  |
+|-------|-------------------------------|-----------------------------------------------------------|
+| S     | Single Responsibility         | Uma responsabilidade por classe                          |
+| O     | Open/Closed                   | Estender sem modificar                                    |
+| L     | Liskov Substitution           | Substituível sem alterar comportamento                    |
+| I     | Interface Segregation         | Interfaces específicas por necessidade                   |
+| D     | Dependency Inversion          | Depender de abstrações, não implementações concretas      |
+
+📚 **Referência**:  
+- https://medium.com/backticks-tildes/the-s-o-l-i-d-principles-in-pictures-b34ce2f1e898
